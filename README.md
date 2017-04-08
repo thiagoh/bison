@@ -4,4 +4,4 @@ From the classic "Bison - The YACC-compatible Parser Generator" from http://dino
 
 *This version intends only to provide a better presentation of this classic article*
 
-Check it here [thiagoh.github.io/lex](https://thiagoh.github.io/bison/)
+Check it here [thiagoh.github.io/bison](https://thiagoh.github.io/bison/)
