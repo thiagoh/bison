@@ -38,6 +38,7 @@
             padding: 10px;
             box-sizing: border-box;
             top: 0;
+            border-bottom: 1px solid #cab6a3;
         }
         
         a {
@@ -59,6 +60,11 @@
         .spacer-20 {
             margin: 0 20px 0 0;
             display: inline;
+        }
+        
+        strike {
+            background: #c66;
+            padding: 0 4px;
         }
         
         @media screen and (max-width: 1024px) {
@@ -2855,7 +2861,7 @@ declarator:
             <pre class="example">T (x) = y+z;
 </pre></div>
 
-        <p>parses as either an <code>expr</code> or a <code>stmt</code> (assuming that &lsquo;<samp>T</samp>&rsquo; is recognized as a <code>TYPENAME</code> and &lsquo;
+        <p>parses as either an <code>expr</code> or a <strike><code>stmt</code></strike> <code>decl</code> (assuming that &lsquo;<samp>T</samp>&rsquo; is recognized as a <code>TYPENAME</code> and &lsquo;
             <samp>x</samp>&rsquo; as an <code>ID</code>). Bison detects this as a reduce/reduce conflict between the rules
             <code>expr : ID</code> and <code>declarator : ID</code>, which it cannot resolve at the time it encounters <code>x</code> in the example above. Since this is a GLR parser, it therefore splits the problem into two parses, one for each choice
             of resolving the reduce/reduce conflict. Unlike the example from the previous section (see <a href="#Simple-GLR-Parsers">Simple GLR Parsers</a>), however, neither of these parses &ldquo;dies,&rdquo; because the grammar as it stands is ambiguous.
